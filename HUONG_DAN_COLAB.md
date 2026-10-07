@@ -179,7 +179,7 @@ Bạn có thể thay đổi các thông số ở **Bước 3** để xem kết q
 
 ```python
 # Thay dataset Emotion bằng AG News
-raw_ag   = load_dataset("ag_news")
+raw_ag   = load_dataset("fancyzhx/ag_news")
 train_ag = raw_ag["train"]
 test_ag  = raw_ag["test"]
 
