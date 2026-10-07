@@ -1,0 +1,227 @@
+{
+  "paper": "SetFit: Efficient Few-Shot Learning Without Prompts (arXiv:2209.11055)",
+  "note": "Offline implementation using TF-IDF+SVD encoder (proxy for Sentence Transformers). Demonstrates the SetFit two-stage training framework.",
+  "timestamp": "2026-10-07T01:36:40.693222",
+  "experiments": {
+    "Emotion": {
+      "8": {
+        "setfit_accuracy": 0.6111111111111112,
+        "baseline_accuracy": 0.5555555555555556,
+        "improvement": 5.555555555555558,
+        "train_size": 48,
+        "test_size": 18,
+        "train_time_seconds": 0.1276564598083496,
+        "classification_report": {
+          "anger": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3.0
+          },
+          "surprise": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 3.0
+          },
+          "fear": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.8,
+            "support": 3.0
+          },
+          "joy": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.5,
+            "support": 3.0
+          },
+          "sadness": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5714285714285714,
+            "support": 3.0
+          },
+          "love": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1-score": 0.75,
+            "support": 3.0
+          },
+          "accuracy": 0.6111111111111112,
+          "macro avg": {
+            "precision": 0.6833333333333332,
+            "recall": 0.611111111111111,
+            "f1-score": 0.6035714285714285,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 0.6833333333333333,
+            "recall": 0.6111111111111112,
+            "f1-score": 0.6035714285714285,
+            "support": 18.0
+          }
+        },
+        "paper_reference_mpnet": 48.8
+      },
+      "64": {
+        "setfit_accuracy": 0.7777777777777778,
+        "baseline_accuracy": 0.6666666666666666,
+        "improvement": 11.111111111111116,
+        "train_size": 60,
+        "test_size": 18,
+        "train_time_seconds": 0.19206786155700684,
+        "classification_report": {
+          "anger": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5714285714285714,
+            "support": 3.0
+          },
+          "surprise": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 3.0
+          },
+          "fear": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.8,
+            "support": 3.0
+          },
+          "joy": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.5,
+            "support": 3.0
+          },
+          "sadness": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1-score": 0.8571428571428571,
+            "support": 3.0
+          },
+          "love": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1-score": 0.8571428571428571,
+            "support": 3.0
+          },
+          "accuracy": 0.7777777777777778,
+          "macro avg": {
+            "precision": 0.8333333333333334,
+            "recall": 0.7777777777777777,
+            "f1-score": 0.7642857142857142,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 0.8333333333333334,
+            "recall": 0.7777777777777778,
+            "f1-score": 0.7642857142857142,
+            "support": 18.0
+          }
+        },
+        "paper_reference_mpnet": 76.2
+      }
+    },
+    "AG_News": {
+      "8": {
+        "setfit_accuracy": 0.875,
+        "baseline_accuracy": 0.875,
+        "improvement": 0.0,
+        "train_size": 32,
+        "test_size": 16,
+        "train_time_seconds": 0.06308579444885254,
+        "classification_report": {
+          "World": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "Sports": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 4.0
+          },
+          "Business": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 4.0
+          },
+          "Sci/Tech": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1-score": 0.8571428571428571,
+            "support": 4.0
+          },
+          "accuracy": 0.875,
+          "macro avg": {
+            "precision": 0.9166666666666666,
+            "recall": 0.875,
+            "f1-score": 0.8785714285714286,
+            "support": 16.0
+          },
+          "weighted avg": {
+            "precision": 0.9166666666666666,
+            "recall": 0.875,
+            "f1-score": 0.8785714285714286,
+            "support": 16.0
+          }
+        },
+        "paper_reference_mpnet": 82.9
+      },
+      "64": {
+        "setfit_accuracy": 0.6875,
+        "baseline_accuracy": 0.75,
+        "improvement": -6.25,
+        "train_size": 40,
+        "test_size": 16,
+        "train_time_seconds": 0.07885503768920898,
+        "classification_report": {
+          "World": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1-score": 0.8,
+            "support": 4.0
+          },
+          "Sports": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "f1-score": 0.7272727272727273,
+            "support": 4.0
+          },
+          "Business": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1-score": 0.4,
+            "support": 4.0
+          },
+          "Sci/Tech": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 4.0
+          },
+          "accuracy": 0.6875,
+          "macro avg": {
+            "precision": 0.8095238095238095,
+            "recall": 0.6875,
+            "f1-score": 0.6484848484848484,
+            "support": 16.0
+          },
+          "weighted avg": {
+            "precision": 0.8095238095238095,
+            "recall": 0.6875,
+            "f1-score": 0.6484848484848484,
+            "support": 16.0
+          }
+        },
+        "paper_reference_mpnet": 88.0
+      }
+    }
+  }
+}
