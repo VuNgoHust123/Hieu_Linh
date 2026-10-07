@@ -44,6 +44,10 @@ Thử nghiệm SetFit trên dataset Emotion (phân loại cảm xúc 6 lớp)
 với N=8 mẫu mỗi lớp (few-shot learning).
 """
 
+# Tắt wandb (tránh bị hỏi tài khoản khi training)
+import os
+os.environ["WANDB_DISABLED"] = "true"
+
 import random
 from collections import defaultdict
 from datasets import load_dataset
@@ -201,6 +205,9 @@ print(f"   (Kết quả trong bài báo với N=8: 82.9%)")
 ---
 
 ## Câu hỏi thường gặp
+
+**Q: Xuất hiện dòng chữ "wandb: Enter your choice" là sao?**
+> Đó là công cụ theo dõi thí nghiệm Weights & Biases hỏi bạn có muốn đăng nhập không. Gõ **`3`** rồi Enter để bỏ qua. Hoặc thêm `os.environ["WANDB_DISABLED"] = "true"` vào đầu cell là sẽ không bị hỏi nữa (đã có sẵn trong code bên trên).
 
 **Q: Chạy mất bao lâu?**
 > Khoảng 3–5 phút với GPU miễn phí của Colab (T4). Nếu dùng CPU thì lâu hơn (~15 phút).
